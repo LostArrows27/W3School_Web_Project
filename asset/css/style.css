@@ -1,0 +1,56 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+#wrapper{
+    background: black;
+    height: 46px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#nav li{ 
+    display: inline-block;
+}
+
+#nav li a{
+    padding: 0 24px 0 24px;
+    color: white;
+    display: inline-block;
+    line-height: 46px;
+}
+
+#nav li:hover a{
+    color: black;
+    background-color: white;
+}
+
+#subnav{
+    display: none;
+}
+
+#header{
+
+}
+
+#slider{
+
+}
+
+#content{
+
+}
+
+#footer{
+
+}
+
