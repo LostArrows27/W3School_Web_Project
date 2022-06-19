@@ -281,6 +281,7 @@ html {
     cursor: pointer;
 }
 
+
 .modal{
     position: fixed;
     top: 0;
@@ -298,7 +299,15 @@ html {
     display: flex;
 }
 
+.modal.close{
+    animation: modalFadeOut ease 0.4s;
+    display: none;
+}
+
+/* open modal ticket */
+
 .modal-container{
+    animation: modalFadeIn ease 0.4s;
     position: relative;
     width: 900px;
     max-width: calc(100% - 32px);
@@ -374,5 +383,103 @@ html {
     float: right;
     align-items: center;
     padding: 10px 20px 20px 10px;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-third{
+    width: 33.333333%;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.contact-content{
+    margin-top: 40px;
+}
+
+.contact-info{
+    font-weight: 300;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.SEND{
+    margin-top: 15px;
+    color: white;
+    background: black;
+    float: right;
+    padding: 13px 15px;
+}
+
+.SEND:hover{
+    color: black;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+@keyframes modalFadeIn {
+    /* From co thuoc tinh CSS tao motion mo dau */
+    from {
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    /* T */
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes modalFadeOut {
+    /* From co thuoc tinh CSS tao motion mo dau */
+    from {
+        transform: translateY(0x);
+        opacity: 1;
+    }
+    /* T */
+    to{
+        transform: translateY(-140px);
+        opacity: 0;
+    }
 }
 
