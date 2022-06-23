@@ -11,18 +11,18 @@ html {
 
 #header {
     position: fixed;
+    z-index: 4;
     top: 0px;
     right: 0px;
     left: 0px;
     background-color: black;
-    height: 46px;
+    height: 51px;
     width: 100%;
 }
 
 #nav li {
     position: relative;
     display: inline-block;
-
 }
 
 #nav li a {
@@ -31,7 +31,7 @@ html {
 }
 
 #nav>li>a {
-    line-height: 46px;
+    line-height: 51px;
     padding: 0 24px;
     color: #fff;
     text-transform: uppercase;
@@ -56,12 +56,17 @@ html {
     padding: 0 50px 0 16px;
 }
 
-#nav>li:hover>a,
-.subnav>li:hover>a {
-    transition: 0.5;
-    background-color:#ccc;
+#nav>li:hover>a {
+    background-color: #BDBDBD;
     color: black;
+    box-sizing: border-box;
+    border-bottom: 5px solid #F44336;
     cursor: pointer;
+}
+
+.subnav>li:hover>a{
+    background-color: #BDBDBD;
+    color: black;
 }
 
 #nav>li:hover>.subnav {
@@ -74,28 +79,53 @@ html {
 
 
 #header .search-btn {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
+
+
 
 #header .search-btn .search-icon {
     font-weight: 500;
     color: #fff;
-    line-height: 46px;
+    line-height: 51px;
     padding: 0 16px;
 }
 
-#header .search-btn:hover .search-icon{
+#header .search-icon:hover .search-icon{
     color: black;
 }
 
-#header .search-btn:hover{
+#header .search-icon:hover{
+    border-bottom: 5px solid #F44336;
     color: black;
     background-color: #BDBDBD;
     cursor: pointer;
 }
 
+#header .search-icon{
+    display: inline-block;
+}
+
+#header .search-box{
+    animation: searchBox ease 0.7s ;
+    display: none;
+}
+
+#header .search-btn:hover > .search-box{
+    display: inline-block;
+}
+
+.search-input{
+    font-size: 15px;
+    border: 2px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
 #slider{
-    z-index: -1;
+    z-index: -3;
     position: relative;
     margin-top: 46px;
     /* or this #adebfc */
@@ -117,10 +147,6 @@ html {
 
 #slider .text-discription{
     line-height: 30px;
-}
-
-#content{
-
 }
 
 #content .content-section{
@@ -153,6 +179,8 @@ html {
 
 #content .team{
     margin-top: 60px;
+    padding-bottom: 6px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -186,7 +214,6 @@ html {
 }
 
 .ticket li{
-
     list-style-type: none;
     font-size: 15px;
     padding-left: 15px;
@@ -226,6 +253,8 @@ html {
 }
 
 .place-image{
+    position: relative;
+    z-index: 0;
     background-color: black !important;
     width: 245px;
     height: auto;
@@ -236,6 +265,7 @@ html {
 }
 
 .place-item{
+    margin-bottom: 40px;
     width: 245px;
     color: black;
 }
@@ -307,7 +337,7 @@ html {
 /* open modal ticket */
 
 .modal-container{
-    animation: modalFadeIn ease 0.4s;
+    animation: modalFadeIn ease 0.5s;
     position: relative;
     width: 900px;
     max-width: calc(100% - 32px);
@@ -451,10 +481,36 @@ html {
     padding: 13px 15px;
 }
 
-.SEND:hover{
-    color: black;
-    background-color: #ccc;
-    cursor: pointer;
+.last-part{
+    font-weight: 500;
+    text-align: center;
+    color: #757575;
+    font-size: 15px;
+}
+
+.linked{
+    font-weight: 500;
+    color: #757575;
+}
+
+.socials-list{
+    margin-top: 30px;
+    max-height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 0 1px;
+    color: #757575;
+    text-decoration: none;
+    font-size: 24px; 
 }
 
 @keyframes modalFadeIn {
@@ -480,6 +536,15 @@ html {
     to{
         transform: translateY(-140px);
         opacity: 0;
+    }
+}
+
+@keyframes searchBox {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
