@@ -7,7 +7,11 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: 'Poppins', Helvetica ,'Roboto',Arial;
+    font-family: 'Poppins', Helvetica, 'Roboto', Arial;
+}
+
+#wrapper {
+    overflow: hidden;
 }
 
 #header {
@@ -51,7 +55,7 @@ html {
 }
 
 .subnav li a {
-    color:black;
+    color: black;
     width: 100%;
     line-height: 38px;
     padding: 0 50px 0 16px;
@@ -65,7 +69,7 @@ html {
     cursor: pointer;
 }
 
-.subnav>li:hover>a{
+.subnav>li:hover>a {
     background-color: #BDBDBD;
     color: black;
 }
@@ -78,15 +82,19 @@ html {
     display: inline-block;
 }
 
+.mobile-menu-btn {
+    display: none;
+}
 
-#header .search-btn {
+#header .search-btn,
+.mobile-menu-btn {
     position: absolute;
     top: 0;
     right: 0;
 }
 
 
-
+#header .mobile-menu-btn .menu-icon,
 #header .search-btn .search-icon {
     font-weight: 500;
     color: #fff;
@@ -94,38 +102,46 @@ html {
     padding: 0 16px;
 }
 
-#header .search-icon:hover .search-icon{
+#header .mobile-menu-btn:hover .menu-icon,
+#header .search-icon:hover .search-icon {
     color: black;
 }
 
-#header .search-icon:hover{
+#header .search-icon:hover {
     border-bottom: 5px solid #F44336;
     color: black;
     background-color: #BDBDBD;
     cursor: pointer;
 }
 
-#header .search-icon{
+.mobile-menu-btn:hover {
+    color: black;
+    background-color: #BDBDBD;
+    cursor: pointer;
+}
+
+#header .menu-icon,
+#header .search-icon {
     display: inline-block;
 }
 
-#header .search-box{
-    animation: searchBox ease 0.7s ;
+#header .search-box {
+    animation: searchBox ease 0.7s;
     display: none;
 }
 
-#header .search-btn:hover > .search-box{
+#header .search-btn:hover>.search-box {
     display: inline-block;
 }
 
-.search-input{
+.search-input {
     font-size: 15px;
     border: 2px solid #ccc;
     padding: 5px 10px;
     border-radius: 15px;
 }
 
-#slider{
+#slider {
     z-index: -3;
     position: relative;
     margin-top: 46px;
@@ -134,7 +150,7 @@ html {
     padding-top: 50%;
 }
 
-#slider .text-content{
+#slider .text-content {
     position: absolute;
     width: 100%;
     bottom: 32px;
@@ -142,16 +158,17 @@ html {
     text-align: center;
 }
 
-#slider .text-heading{
+#slider .text-heading {
     margin: 10px;
 }
 
-#slider .text-discription{
+#slider .text-discription {
     line-height: 30px;
 }
 
-#content .content-section{
-    width: 900px;
+#content .content-section {
+    width: 840px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px;
@@ -159,26 +176,26 @@ html {
     box-sizing: border-box;
 }
 
-#content .content-section .section-heading{
+#content .content-section .section-heading {
     letter-spacing: 4px;
     font-weight: 500;
     font-size: 30px;
     text-align: center;
 }
 
-#content .content-section .section-sub-heading{
-    color:rgb(147, 147, 147);
+#content .content-section .section-sub-heading {
+    color: rgb(147, 147, 147);
     margin: 25px;
     text-align: center;
     font-size: 15px;
 }
 
-#content .content-section .about-text{
+#content .content-section .about-text {
     line-height: 1.4;
     font-size: 15px;
 }
 
-#content .team{
+#content .team {
     margin-top: 60px;
     padding-bottom: 6px;
     margin-bottom: 40px;
@@ -187,42 +204,42 @@ html {
     align-items: center;
 }
 
-#content .team .member{
+#content .team .member {
     text-align: center;
-    display:inline-block;
+    display: inline-block;
 }
 
-.img{
+.img {
     margin-top: 20px;
     width: 158px;
     height: 158px;
 }
 
 /* Tour section */
-.tour-section{
+.tour-section {
     background: black;
 }
 
 /* 1 class cho những place cần white text */
-.text-white{
+.text-white {
     color: #fff !important;
 }
 
-.ticket{
+.ticket {
     margin-top: 40px;
     align-items: center;
     background: white;
 }
 
-.ticket li{
+.ticket li {
     list-style-type: none;
     font-size: 15px;
     padding-left: 15px;
     border-bottom: 1px solid #d8d8d8;
-    color:#757575 !important;
+    color: #757575 !important;
 }
 
-.sold-out{
+.sold-out {
     padding: 3.5px 4.5px 3.5px 4.5px;
     margin-left: 20px;
     color: white;
@@ -230,7 +247,7 @@ html {
     background: #F44336;
 }
 
-.quantity{
+.quantity {
     margin-top: 10px;
     margin-right: 20px;
     float: right;
@@ -245,60 +262,61 @@ html {
 }
 
 /* Place */
-.place-lists{
+.place-lists {
     margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
-.place-image{
+.place-image {
     position: relative;
     z-index: 0;
     background-color: black !important;
-    width: 245px;
+    width: 100%;
     height: auto;
 }
 
-.place-image:hover{
+.place-image:hover {
     opacity: 0.6;
 }
 
-.place-item{
-    margin-bottom: 40px;
-    width: 245px;
+.place-item {
+    float: left;
+    /* margin-bottom: 40px; */
+    padding: 0 8px;
+    width: 33.333333%;
     color: black;
 }
 
-.place-heading{
+.place-heading {
     padding-top: 10px;
 }
 
-.place-heading, .place-time{
+.place-heading,
+.place-time {
     font-size: 15px;
     line-height: 35px;
 }
 
-.place-time{
-    color:#757575 !important;
+.place-time {
+    color: #757575 !important;
 }
 
-.place-descript{
+.place-descript {
     font-size: 15px;
     padding-top: 10px;
     padding-bottom: 15px;
     letter-spacing: 0.03px;
 }
 
-.place-body{
+.place-body {
     margin-top: -5px;
     background-color: white;
     padding: 0 20px 20px 15px;
     line-height: 20px;
 }
 
-.place-button{
+.place-button {
     font-size: 15px;
     width: 110px;
     height: 40px;
@@ -306,14 +324,14 @@ html {
     color: white;
 }
 
-.place-button:hover{
+.place-button:hover {
     background-color: #BDBDBD;
     color: black;
     cursor: pointer;
 }
 
 
-.modal{
+.modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -325,19 +343,20 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 /* class open de hien len modal ticket */
-.modal.open{
+.modal.open {
     display: flex;
 }
 
-.modal.close{
+.modal.close {
     animation: modalFadeOut ease 0.4s;
     display: none;
 }
 
 /* open modal ticket */
 
-.modal-container{
+.modal-container {
     animation: modalFadeIn ease 0.5s;
     position: relative;
     width: 900px;
@@ -346,7 +365,7 @@ html {
     background-color: #fff;
 }
 
-.modal-header{
+.modal-header {
     font-size: 30px;
     color: #fff;
     letter-spacing: 4px;
@@ -357,11 +376,11 @@ html {
     justify-content: center;
 }
 
-.modal-heading-icon{
+.modal-heading-icon {
     margin-right: 16px;
 }
 
-.modal-close{
+.modal-close {
     position: absolute;
     right: 0;
     color: #fff;
@@ -369,23 +388,23 @@ html {
     padding: 12px;
 }
 
-.modal-close:hover{
+.modal-close:hover {
     background-color: #ccc !important;
     color: #000 !important;
     cursor: pointer;
 }
 
-.modal-body{
+.modal-body {
     padding: 16px;
 }
 
-.modal-label{
+.modal-label {
     margin-bottom: 12px;
     font-size: 15px;
     display: block;
 }
 
-.modal-input{
+.modal-input {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     width: 100%;
@@ -393,7 +412,7 @@ html {
     font-size: 15px;
 }
 
-#buy-tickets{
+#buy-tickets {
     font-weight: 500;
     font-size: 15px;
     padding: 15px;
@@ -402,13 +421,13 @@ html {
     color: white;
 }
 
-#buy-tickets:hover{
+#buy-tickets:hover {
     color: black !important;
     background: #ccc;
     cursor: pointer;
 }
 
-.modal-footer{
+.modal-footer {
     font-size: 15px;
     display: flex;
     float: right;
@@ -416,65 +435,71 @@ html {
     padding: 10px 20px 20px 10px;
 }
 
-.mt-8{
+.mt-8 {
     margin-top: 8px !important;
 }
 
-.col{
+.col {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
 }
 
-.row{
+.row {
     margin-left: -8px;
     margin-right: -8px;
 }
 
-.row::after{
+.row::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.col-third{
+.col-third {
     width: 33.333333%;
 }
 
-.col-half{
+.clear {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col-half {
     width: 50%;
 }
 
-.col-full{
+.col-full {
     width: 100%;
 }
 
-.contact-content{
+.contact-content {
     margin-top: 40px;
 }
 
-.contact-info{
+.contact-info {
     font-weight: 300;
     line-height: 1.4;
     font-size: 18px;
 }
 
-.contact-info i[class*="ti-"]{
+.contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
 }
 
-.contact-form{
+.contact-form {
     font-size: 15px;
 }
 
-.form-control{
+.form-control {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
 }
 
-.SEND{
+.SEND {
     margin-top: 15px;
     color: white;
     background: black;
@@ -482,19 +507,19 @@ html {
     padding: 13px 15px;
 }
 
-.last-part{
+.last-part {
     font-weight: 500;
     text-align: center;
     color: #757575;
     font-size: 15px;
 }
 
-.linked{
+.linked {
     font-weight: 500;
     color: #757575;
 }
 
-.socials-list{
+.socials-list {
     margin-top: 30px;
     max-height: 80px;
     box-sizing: border-box;
@@ -503,7 +528,7 @@ html {
     justify-content: center;
 }
 
-.social{
+.social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -511,30 +536,38 @@ html {
     padding: 0 1px;
     color: #757575;
     text-decoration: none;
-    font-size: 24px; 
+    font-size: 24px;
+}
+
+.social:hover {
+    opacity: 0.6;
 }
 
 @keyframes modalFadeIn {
+
     /* From co thuoc tinh CSS tao motion mo dau */
     from {
         transform: translateY(-140px);
         opacity: 0;
     }
+
     /* T */
-    to{
+    to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes modalFadeOut {
+
     /* From co thuoc tinh CSS tao motion mo dau */
     from {
         transform: translateY(0x);
         opacity: 1;
     }
+
     /* T */
-    to{
+    to {
         transform: translateY(-140px);
         opacity: 0;
     }
@@ -544,8 +577,8 @@ html {
     from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
-

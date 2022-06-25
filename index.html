@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./asset/icons/web_icon.png">
     <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/responsive.css">
     <link rel="stylesheet" href="./asset/icons/themify-icons-font/themify-icons/themify-icons.css">
     <title>The Band project</title>
 </head>
@@ -41,7 +42,10 @@
                     <i class="ti-search"></i>
                 </div>
             </div>
-            <!-- End: Search Button -->
+            <!-- Begin: Mobile Menu Button -->
+            <div id="mobileMenu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
         <!-- Begin: Slider -->
         <div id="slider">
@@ -55,7 +59,7 @@
         <!-- Begin: Content -->
         <div id="content">
             <!-- Begin: THE BAND -->
-            <div id = "band" class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading"><i>We love music</i></p>
                 <p class="about-text">
@@ -85,7 +89,7 @@
                 <!-- End: THE BAND -->
             </div>
             <!-- Begin: TICKET -->
-            <div id = "tours" class="tour-section">
+            <div id="tours" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading"><i>Remember to books your tickets!</i></p>
@@ -102,7 +106,7 @@
                                 <p class="place-heading"><b>New York</b></p>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-descript">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-button js-buy-ticket"> Buy Tickets</button>
+                                <button class="place-button js-buy-ticket s-full-width"> Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -111,7 +115,7 @@
                                 <p class="place-heading"><b>Paris</b></p>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-descript">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-button js-buy-ticket">Buy Tickets</button>
+                                <button class="place-button js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -120,31 +124,32 @@
                                 <p class="place-heading"><b>San Francisco</b></p>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-descript">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button class="place-button js-buy-ticket">Buy Tickets</button>
+                                <button class="place-button js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
+                        <div class="clear"></div>
                     </div>
                     <!-- End: Place -->
                 </div>
             </div>
             <!-- End: TICKET -->
             <!-- Begin: CONTACT -->
-            <div id = "contacts" class="content-section">
+            <div id="contacts" class="content-section">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading"><i>Fans? Drop a note!</i></p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>Chicago, US</p>
                         <p><i class="ti-mobile"></i>Phone: +00 151515</p>
                         <p><i class="ti-email"></i>Email: mail@mail.com</p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="http://google.com" target="_blank">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full s-mb-8">
                                     <input type="text" class="form-control" required="required" placeholder="Name">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col col-half s-col-full">
                                     <input type="email" class="form-control" required="required" placeholder="Email">
                                 </div>
                             </div>
@@ -154,7 +159,7 @@
                                         placeholder="Message">
                                 </div>
                             </div>
-                            <input type="submit" value="SEND" class="place-button SEND">
+                            <input type="submit" value="SEND" class="place-button SEND s-full-width">
                         </form>
                     </div>
                 </div>
@@ -168,14 +173,15 @@
         </div>
         <div id="footer">
             <div class="socials-list">
-                <a href="" class = "social"><i class = "ti-facebook"></i></a>
-                <a href="" class = "social"><i class = "ti-instagram"></i></a>
-                <a href="" class = "social"><i class = "ti-youtube"></i></a>
-                <a href="" class = "social"><i class = "ti-pinterest"></i></a>
-                <a href="" class = "social"><i class = "ti-twitter"></i></a>
-                <a href="" class = "social"><i class = "ti-linkedin"></i></a>
+                <a href="" class="social"><i class="ti-facebook"></i></a>
+                <a href="" class="social"><i class="ti-instagram"></i></a>
+                <a href="" class="social"><i class="ti-youtube"></i></a>
+                <a href="" class="social"><i class="ti-pinterest"></i></a>
+                <a href="" class="social"><i class="ti-twitter"></i></a>
+                <a href="" class="social"><i class="ti-linkedin"></i></a>
             </div>
-            <p class = "last-part">Powered by <a href="https://www.w3schools.com/w3css/default.asp" class ="linked">w3.css</a></p>
+            <p class="last-part">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
+                    class="linked">w3.css</a></p>
         </div>
     </div>
     <!-- Begin of Modal -->
@@ -219,6 +225,7 @@
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
         const close = document.querySelector('.js-modal-close')
+        const menuBtns = document.querySelectorAll('.js-menu-click')
         // Fucntion to show ticket (add open class to modal)
         function showBuyTickets() {
             modal.classList.add('open');
@@ -245,6 +252,35 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation();
         })
+
+        // Mobile menu button JS
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobileMenu');
+        var headerHeight = header.clientHeight;
+
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = '51px';
+            }
+        }
+
+        // Khi chon phan tu trong Menu se tu dong dong
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function () {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+
     </script>
 </body>
 
