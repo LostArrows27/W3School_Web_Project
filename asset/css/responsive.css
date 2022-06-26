@@ -1,8 +1,39 @@
-@media(min-width : 1024px) {}
+@media(min-width : 64em) {}
 
-@media(min-width: 724px) and (max-width: 1023px) {}
+@media(max-width : 64em) {
+    .place-button {
+        height: 50px;
+    }
 
-@media(max-width : 723px) {
+    .form-control {
+        padding: 15px;
+    }
+
+    .socials-list {
+        justify-content: space-evenly;
+    }
+
+    .social {
+        font-size: 36px;
+    }
+
+    .last-part {
+        font-size: 17px;
+    }
+
+    .linked {
+        padding: 15px 0px;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+        line-height: 1.9;
+    }
+}
+
+@media(min-width: 45.25em) and (max-width: 63.9375em) {}
+
+@media(max-width : 45.1875em) {
 
     .s-full-width {
         width: 100% !important;
@@ -86,5 +117,10 @@
 
     .s-mb-8 {
         margin-bottom: 8px;
+    }
+
+    #nav>li:hover::after {
+        content: "";
+        display: none;
     }
 }

@@ -25,6 +25,10 @@ html {
     width: 100%;
 }
 
+#slider .text-discription {
+    text-shadow: 0 0 2px #000;
+}
+
 #nav li {
     position: relative;
     display: inline-block;
@@ -65,8 +69,17 @@ html {
     background-color: #BDBDBD;
     color: black;
     box-sizing: border-box;
-    border-bottom: 5px solid #F44336;
     cursor: pointer;
+}
+
+#nav>li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0px;
+    background-color: #F44336;
 }
 
 .subnav>li:hover>a {
@@ -108,10 +121,20 @@ html {
 }
 
 #header .search-icon:hover {
-    border-bottom: 5px solid #F44336;
     color: black;
     background-color: #BDBDBD;
     cursor: pointer;
+}
+
+#header .search-icon:hover::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #F44336;
 }
 
 .mobile-menu-btn:hover {
@@ -135,6 +158,7 @@ html {
 }
 
 .search-input {
+    width: 150px;
     font-size: 15px;
     border: 2px solid #ccc;
     padding: 5px 10px;
@@ -146,7 +170,7 @@ html {
     position: relative;
     margin-top: 46px;
     /* or this #adebfc */
-    background: url(/asset/image/street.jpg) no-repeat top center / cover;
+    background: url(../image/street.jpg) no-repeat top center / cover;
     padding-top: 50%;
 }
 
@@ -435,6 +459,10 @@ html {
     padding: 10px 20px 20px 10px;
 }
 
+#footer {
+    padding-bottom: 50px;
+}
+
 .mt-8 {
     margin-top: 8px !important;
 }
@@ -489,6 +517,15 @@ html {
     display: inline-block;
 }
 
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
 .contact-form {
     font-size: 15px;
 }
@@ -508,6 +545,7 @@ html {
 }
 
 .last-part {
+    margin-top: 20px;
     font-weight: 500;
     text-align: center;
     color: #757575;
